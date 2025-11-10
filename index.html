@@ -1,71 +1,395 @@
 <!DOCTYPE html>
 <!-- Aleksas Vindašius EDIF-24/2 -->
 <html lang="lt">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mano puslapis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mano CV</title>
+  <meta name="author" content="Aleksas Vindašius">
+  <meta name="description" content="Aleksas Vindašius CV puslapis">
+  <meta name="keywords" content="CV, Portfolio, AI, Dirbtinis intelektas, VILNIUS TECH">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyResume
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
-    <!-- a. Antraštės -->
-    <h1>Aleksas Vindašius</h1>
-    <h5>EDIF-24/2</h5>
-    
-    <!-- b. Pastraipa su pabraukimu -->
-    <!-- u žymė vizualiai pabraukia tekstą, bet gali būti klaidinanti, nes naršyklės -->
-    <!-- dažnai pabraukimą asocijuoja su nuorodomis -->
-    <p><u>Mano mėgstamiausias hobis yra video žaidimai. Mėgstu žaisti įvairius žanrų žaidimus ir domiuosi žaidimų kūrimo procesu.</u></p>
-    
-    <!-- c. Nuoroda -->
-    <p>Apsilankykite <a href="https://www.w3schools.com/html/">W3Schools HTML pamokose</a></p>
-    
-    <!-- d. Paveikslėlis -->
-    <img src="images/Screenshot 2025-11-03 124601.png" alt="Programuotojas dirbantis prie kompiuterio" width="300">
-    
-    <!-- e. Sąrašai -->
-    <h3>Dominančios IT sritys:</h3>
-    <ol>
-        <!-- strong žymė suteikia semantinę svarbos reikšmę, o b žymė tik vizualiai paryškina -->
-        <li><strong>Dirbtinis intelektas</strong></li>
-        <li><b>Duomenų mokslas</b></li>
-        <li>Kibernetinis saugumas</li>
-    </ol>
-    
-    <h3>Įgūdžiai, kuriuos norėčiau išmokti:</h3>
-    <ul>
-        <!-- em žymė suteikia semantinę pabrėžimo reikšmę, o i žymė tik vizualiai pasvėria -->
-        <li><em>Laiku pradėti mokytis</em></li>
-        <li><i>Nepasilikti visko paskutinei dienai</i></li>
-        <li>Atsiskaitimus išlaikyti iš pirmo karto</li>
-    </ul>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex flex-column justify-content-center">
+
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="#services"><i class="bi bi-gear navicon"></i><span>Paslaugos</span></a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg1.png" alt="Hero Background Image - Personal Portfolio Background">
+
+      <div class="container" data-aos="zoom-out">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <h2>Aleksas Vindašius</h2>
+            <p>Aš esu <span class="typed" data-typed-items="Programuotojas, Web Developeris, Studentas">Programuotojas</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <div class="social-links">
+              <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Apie mane</h2>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <img src="assets/img/profile-img1.png" class="img-fluid" alt="Aleksas Vindašius - AI Student Profile Photo">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Esu Aleksas Vindašius, būsimas dirbtinio intelekto specialistas ir technologijų entuziastas. Šiuo metu studijuoju 
+              dirbtinio intelekto specialybę Vilniaus technologijos universitete (VILNIUS TECH), kur esu antrojo semestro studentas. 
+              Mano aistra technologijoms ir ypač dirbtiniam intelektui atvedė mane į šią perspektyvią sritį.
+            </p>
+            <p>
+              Studijų metu gilinu žinias mašininio mokymosi, duomenų analizės ir dirbtinio intelekto srityse. Dirbu su 
+              populiariausiomis AI/ML technologijomis, įskaitant Python, TensorFlow, PyTorch ir kitas. Man ypač įdomu 
+              nagrinėti neuroninių tinklų architektūras ir jų pritaikymą realiems projektams. Aktyviai dalyvauju 
+              universiteto AI tyrimų projektuose ir bendradarbiauju su kitais studentais kuriant inovatyvius sprendimus.
+            </p>
+            <p>
+              Laisvalaikiu mėgstu sekti naujausias dirbtinio intelekto tendencijas, dalyvauti AI hackathon'uose ir 
+              eksperimentuoti su naujais algoritmais. Taip pat domiuosi robotika ir kompiuterine rega, nes tikiu, kad 
+              šios sritys kartu su AI kurs ateities technologijas. Esu įsitikinęs, kad dirbtinis intelektas turi milžinišką 
+              potencialą pagerinti mūsų kasdienį gyvenimą.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Patirtis</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Išsilavinimas</h3>
+            <div class="resume-item">
+              <h4>Dirbtinio Intelekto specialybė</h4>
+              <h5>2025 - Dabar</h5>
+              <p><em>Vilniaus technologijos universitetas (VILNIUS TECH)</em></p>
+              <p>Studijuoju dirbtinio intelekto programą, gilinuosi į mašininį mokymąsi ir duomenų analizę. Aktyviai dalyvauju universiteto projektuose ir dirbu su pažangiomis technologijomis AI srityje.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Projektai ir Patirtis</h3>
+            <div class="resume-item">
+              <h4>Dirbtinio intelekto projektai</h4>
+              <h5>2025 - Dabar</h5>
+              <p><em>VILNIUS TECH</em></p>
+              <ul>
+                <li>Dirbau su vaizdo atpažinimo sistemomis naudojant Grad-CAM</li>
+                <li>Pritaikiau Google Net architektūrą vaizdų klasifikavimui</li>
+                <li>Atlikau duomenų analizę naudojant Python</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Universiteto projektai</h4>
+              <h5>2024 - 2025</h5>
+              <p><em>VILNIUS TECH</em></p>
+              <ul>
+                <li>Kūriau paprastus mašininio mokymosi modelius</li>
+                <li>Dirbau su duomenų rinkinių paruošimu</li>
+                <li>Atlikau bazinę vaizdo analizę</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Resume Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Paslaugos</h2>
+          <p>Susipažinkite su mano darbo procesu ir metodais</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 mb-4">
+            <div class="service-item">
+              <h4>Programavimo Procesas</h4>
+              <p>Taip atrodo mano kasdieninis darbas su kodu:</p>
+              <video class="img-fluid w-100" controls>
+                <source src="assets/media/vidio.mp4" type="video/mp4">
+                Jūsų naršyklė nepalaiko vaizdo įrašų atkūrimo.
+              </video>
+            </div>
+          </div>
+
+          <div class="col-lg-12 mb-4">
+            <div class="service-item">
+              <h4>AI Projektų Vystymas</h4>
+              <p>Išsamiau apie dirbtinio intelekto projektų kūrimą:</p>
+              <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/BoUVIhtqjAw" 
+                        title="AI Projektų Vystymas" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="service-item">
+              <h4>Darbo Ritmas</h4>
+              <p>Produktyvaus darbo pavyzdys:</p>
+              <audio controls class="w-100">
+                <source src="assets/media/audio.mp3" type="audio/mpeg">
+                Jūsų naršyklė nepalaiko garso įrašų atkūrimo.
+              </audio>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Mano Matlab laboratorinių darbų rezultatai, apimantys 3-iojo ir 4-ojo laboratorinių darbų grafikus ir analizes.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <img src="assets/img/portfolio/foto1.png" class="img-fluid" alt="Matlab Lab Work 1">
+            <div class="portfolio-info">
+              <h4>Matlab Laboratorinis 3</h4>
+              <p>Signalų analizės rezultatai</p>
+              <a href="assets/img/portfolio/foto1.png" title="Matlab Lab 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div><!-- End Portfolio Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <img src="assets/img/portfolio/foto2.png" class="img-fluid" alt="Matlab Lab Work 2">
+            <div class="portfolio-info">
+              <h4>Matlab Laboratorinis 3</h4>
+              <p>Duomenų vizualizacija</p>
+              <a href="assets/img/portfolio/foto2.png" title="Matlab Lab 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div><!-- End Portfolio Item -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <img src="assets/img/portfolio/foto3.png" class="img-fluid" alt="Matlab Lab Work 3">
+            <div class="portfolio-info">
+              <h4>Matlab Laboratorinis 4</h4>
+              <p>Signalų apdorojimo rezultatai</p>
+              <a href="assets/img/portfolio/foto3.png" title="Matlab Lab 4" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+            </div>
+          </div><!-- End Portfolio Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>info@example.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name" class="visually-hidden">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="visually-hidden">Your Email</label>
+                  <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject" class="visually-hidden">Subject</label>
+                  <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message" class="visually-hidden">Message</label>
+                  <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <h3 class="sitename">Aleksas Vindašius</h3>
+      <p>AI studentas | Web developeris | Technologijų entuziastas</p>
+      <div class="social-links d-flex justify-content-center">
+        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright</span> <strong class="px-1 sitename">Aleksas Vindašius</strong> <span>All Rights Reserved</span>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
-
-<!-- 
-Pagrindinių HTML žymių paskirtis:
-
-<!DOCTYPE html> - nurodo, kad tai HTML5 dokumentas
-<html> - pagrindinė dokumento šaknis, apgaubia visą HTML turinį
-<head> - talpina metaduomenis (pavadinimą, kodavimą, stilius, skriptus)
-<meta> - pateikia papildomą informaciją apie dokumentą (kodavimą, peržiūros parametrus)
-<title> - nustato puslapio pavadinimą, rodomą naršyklės skirtuke
-<body> - talpina visą vartotojui matomą puslapio turinį
-
-Žymių skirtumai:
-
-<strong> vs <b>:
-- <strong> - semantinė žymė, nurodo teksto svarbą (naršyklės, skaitytuvai pripažįsta)
-- <b> - tik vizualus paryškinimas, be semantinės reikšmės
-
-<em> vs <i>:
-- <em> - semantinė žymė, nurodo teksto pabrėžimą (intonacijos pakeitimą)
-- <i> - tik vizualus pasvirimas, be semantinės reikšmės
-
-<u> - pabraukimas:
-- Vizualiai pabraukia tekstą, bet gali klaidinti vartotojus
-- Naršyklės dažnai pabraukimą asocijuoja su nuorodomis
-- Geriau naudoti CSS text-decoration vietoj u žymės
-
-Div konteineris - universalus konteineris elementų grupavimui ir struktūrizavimui
-Live Server papildinys leidžia matyti pakeitimus realiu laiku naršyklėje.
--->
