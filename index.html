@@ -29,6 +29,11 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <!-- Custom CSS File -->
+  <link href="assets/css/custom.css" rel="stylesheet">
+
+  
+
   <!-- =======================================================
   * Template Name: MyResume
   * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -67,8 +72,8 @@
       <div class="container" data-aos="zoom-out">
         <div class="row justify-content-center">
           <div class="col-lg-9">
-            <h2>Aleksas Vindašius</h2>
-            <p>Aš esu <span class="typed" data-typed-items="Programuotojas, Web Developeris, Studentas">Programuotojas</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+            <h2 class="red-name">Aleksas Vindašius</h2>
+            <p>Aš esu <span class="typed green-typed" data-typed-items="Programuotojas, Web Developeris, Studentas">Programuotojas</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
               <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
               <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -141,19 +146,24 @@
               <h4>Dirbtinio intelekto projektai</h4>
               <h5>2025 - Dabar</h5>
               <p><em>VILNIUS TECH</em></p>
-              <ul>
+              <ol class="custom-ordered-list">
                 <li>Dirbau su vaizdo atpažinimo sistemomis naudojant Grad-CAM</li>
                 <li>Pritaikiau Google Net architektūrą vaizdų klasifikavimui</li>
                 <li>Atlikau duomenų analizę naudojant Python</li>
-              </ul>
+              </ol>
             </div>
             <div class="resume-item">
               <h4>Universiteto projektai</h4>
               <h5>2024 - 2025</h5>
               <p><em>VILNIUS TECH</em></p>
-              <ul>
+              <ul class="custom-unordered-list">
                 <li>Kūriau paprastus mašininio mokymosi modelius</li>
-                <li>Dirbau su duomenų rinkinių paruošimu</li>
+                <li>Dirbau su duomenų rinkinių paruošimu
+                  <ul>
+                    <li>Duomenų valymas ir normalizavimas</li>
+                    <li>Trūkstamų reikšmių apdorojimas</li>
+                  </ul>
+                </li>
                 <li>Atlikau bazinę vaizdo analizę</li>
               </ul>
             </div>
@@ -206,6 +216,44 @@
                 <source src="assets/media/audio.mp3" type="audio/mpeg">
                 Jūsų naršyklė nepalaiko garso įrašų atkūrimo.
               </audio>
+            </div>
+          </div>
+
+          <div class="col-lg-12">
+            <div class="service-item">
+              <h4>Paslaugų Lentelė</h4>
+              <p>Mano teikiamų paslaugų sąrašas su kainomis:</p>
+              <table class="services-table">
+                <thead>
+                  <tr>
+                    <th>Paslauga</th>
+                    <th>Aprašymas</th>
+                    <th>Kaina</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tinklalapių programavimas</td>
+                    <td>Tik asmeninių svetainių dizaino kūrimas</td>
+                    <td>100 Eur</td>
+                  </tr>
+                  <tr>
+                    <td>AI projektų konsultacijos</td>
+                    <td>Dirbtinio intelekto sprendimų patarimai ir įgyvendinimas</td>
+                    <td>150 Eur</td>
+                  </tr>
+                  <tr>
+                    <td>Duomenų analizė</td>
+                    <td>Python naudojant duomenų rinkinių analizė ir vizualizacija</td>
+                    <td>120 Eur</td>
+                  </tr>
+                  <tr>
+                    <td>Matlab laboratoriniai darbai</td>
+                    <td>Signalų apdorojimo ir analizės užduočių sprendimas</td>
+                    <td>80 Eur</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

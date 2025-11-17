@@ -1455,6 +1455,8 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+
+  padding: 60px 0;
+
 }
 
