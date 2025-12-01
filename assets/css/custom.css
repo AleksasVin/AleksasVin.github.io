@@ -928,3 +928,407 @@ audio {
 /* ============================================
    END OF CUSTOM CSS
    ============================================ */
+
+/* ============================================
+   18. CSS ANIMATIONS - @KEYFRAMES
+   ============================================ */
+
+/* Animation 1: Fade-in Section Animation */
+@keyframes fadeInSection {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to sections */
+section {
+  animation: fadeInSection 0.8s ease-in-out forwards;
+  animation-fill-mode: backwards;
+  opacity: 1;
+}
+
+section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+section:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+section:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+section:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+section:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+/* Animation 2: Social Icons Float Animation */
+@keyframes socialIconFloat {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.05);
+  }
+}
+
+.social-links a {
+  animation: socialIconFloat 2s ease-in-out infinite;
+}
+
+.social-links a:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.social-links a:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.social-links a:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.social-links a:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   19. PAGE LOADER ANIMATIONS
+   ============================================ */
+
+/* Animation 3: Spinning Loader Animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spinner Preloader Style */
+.preloader-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border: 6px solid rgba(55, 0, 255, 0.1);
+  border-top: 6px solid var(--color-primary);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.2s linear infinite;
+  box-shadow: 0 0 20px rgba(55, 0, 255, 0.3);
+}
+
+/* Animation 4: Pulsing Dots Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Pulsing Dots Preloader Style */
+.preloader-dots {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Decorative Loader - Alternative Style */
+.loader-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loader-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid transparent;
+  border-top-color: var(--color-primary);
+  border-right-color: var(--color-secondary);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.loader-circle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 3px solid var(--color-accent);
+  border-radius: 50%;
+  animation: spin 3s linear infinite reverse;
+}
+
+/* Hide loader when page is loaded */
+.preloader-spinner.hidden,
+.preloader-dots.hidden {
+  display: none !important;
+}
+
+/* Optional: Fade out animation for loader */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.preloader-spinner.fade-out,
+.preloader-dots.fade-out {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+/* ============================================
+   20. DECORATOR LOADER IN SECTIONS
+   ============================================ */
+
+/* Decorative loader for sections */
+.section-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+}
+
+.section-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border-width: 4px;
+}
+
+/* ============================================
+   21. ANIMATED GRADIENT IN SERVICES SECTION
+   ============================================ */
+
+#services {
+  background: linear-gradient(-45deg, #3700ff, #003cff, #07ffa0, #3700ff);
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+   22. CSS SHAPES IN ABOUT SECTION
+   ============================================ */
+
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+#about::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  animation: floatCircle 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+#about::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid var(--color-primary);
+  animation: rotateTriangle 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes floatCircle {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2);
+  }
+}
+
+@keyframes rotateTriangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Additional CSS Shapes */
+#about .shape-square {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-secondary);
+  animation: scaleSquare 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes scaleSquare {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+#about .shape-hexagon {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-accent);
+  clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+  animation: floatHexagon 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes floatHexagon {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(0) translateY(-10px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-5px);
+  }
+}
+
+#about .shape-rectangle {
+  position: absolute;
+  top: 55%;
+  left: 5%;
+  width: 120px;
+  height: 60px;
+  background-color: var(--color-primary);
+  animation: rotateRectangle 4s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateRectangle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#about .shape-circle-small {
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  animation: bounceCircle 2s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes bounceCircle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
