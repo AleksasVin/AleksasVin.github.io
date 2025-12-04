@@ -355,27 +355,62 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form class="custom-contact-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <label for="name" class="visually-hidden">Your Name</label>
-                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                  <label for="vardas">Vardas</label>
+                  <input type="text" id="vardas" name="vardas" class="form-control" placeholder="Įveskite savo vardą" required>
                 </div>
 
                 <div class="col-md-6">
-                  <label for="email" class="visually-hidden">Your Email</label>
-                  <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
+                  <label for="pavarde">Pavardė</label>
+                  <input type="text" id="pavarde" name="pavarde" class="form-control" placeholder="Įveskite savo pavardę" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email">El. paštas</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Įveskite savo el. paštą" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="telefonas">Telefono numeris</label>
+                  <input type="tel" id="telefonas" name="telefonas" class="form-control" placeholder="Įveskite telefono numerį" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="subject" class="visually-hidden">Subject</label>
-                  <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
+                  <label for="adresas">Adresas</label>
+                  <input type="text" id="adresas" name="adresas" class="form-control" placeholder="Įveskite savo adresą" required>
                 </div>
 
                 <div class="col-md-12">
-                  <label for="message" class="visually-hidden">Message</label>
-                  <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <label for="klausimas1">Klausimas 1: Kaip vertinate mūsų paslaugas? (1-10)</label>
+                  <input type="range" id="klausimas1" name="klausimas1" class="form-control" min="1" max="10" value="5" required>
+                  <div class="d-flex justify-content-between">
+                    <span>1</span>
+                    <span id="klausimas1-value">5</span>
+                    <span>10</span>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="klausimas2">Klausimas 2: Kaip vertinate mūsų svetainę? (1-10)</label>
+                  <input type="range" id="klausimas2" name="klausimas2" class="form-control" min="1" max="10" value="5" required>
+                  <div class="d-flex justify-content-between">
+                    <span>1</span>
+                    <span id="klausimas2-value">5</span>
+                    <span>10</span>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <label for="klausimas3">Klausimas 3: Kaip vertinate mūsų kainas? (1-10)</label>
+                  <input type="range" id="klausimas3" name="klausimas3" class="form-control" min="1" max="10" value="5" required>
+                  <div class="d-flex justify-content-between">
+                    <span>1</span>
+                    <span id="klausimas3-value">5</span>
+                    <span>10</span>
+                  </div>
                 </div>
 
                 <div class="col-md-12 text-center">
@@ -383,7 +418,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Submit</button>
                 </div>
 
               </div>
@@ -395,6 +430,87 @@
       </div>
 
     </section><!-- /Contact Section -->
+
+    <!-- Memory Game Section -->
+    <section id="memory-game" class="memory-game section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Mano Žaidimas</h2>
+        <p>Raskite visas kortelių poras ir laimėkite žaidimą!</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Difficulty Selection -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-6">
+            <div class="difficulty-selection">
+              <h4 class="text-center mb-3">Pasirinkite sudėtingumo lygį:</h4>
+              <div class="d-flex justify-content-center gap-3">
+                <button id="easy-btn" class="btn btn-primary difficulty-btn active">Lengvas (4×3)</button>
+                <button id="hard-btn" class="btn btn-primary difficulty-btn">Sunkus (6×4)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8">
+            <div class="game-controls text-center">
+              <button id="start-btn" class="btn btn-success me-3">Start</button>
+              <button id="reset-btn" class="btn btn-warning">Atnaujinti</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="row justify-content-center mb-4">
+          <div class="col-lg-8">
+            <div class="game-stats">
+              <div class="stat-item">
+                <span class="stat-label">Laikas:</span>
+                <span id="timer-display" class="stat-value">00:00</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Ėjimų skaičius:</span>
+                <span id="moves-count" class="stat-value">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Sutapusių porų skaičius:</span>
+                <span id="pairs-count" class="stat-value">0</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Geriausias rezultatas (Lengvas):</span>
+                <span id="best-score-easy" class="stat-value">-</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Geriausias rezultatas (Sunkus):</span>
+                <span id="best-score-hard" class="stat-value">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div id="game-board" class="game-board">
+              <!-- Cards will be generated here -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Win Message -->
+        <div id="win-message" class="win-message text-center" style="display: none;">
+          <h3 class="text-success">Laimėjote!</h3>
+          <p>Jūs sėkmingai radote visas kortelių poras!</p>
+        </div>
+
+      </div>
+
+    </section><!-- /Memory Game Section -->
 
   </main>
 
@@ -443,6 +559,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS File -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
